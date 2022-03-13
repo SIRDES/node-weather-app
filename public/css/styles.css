@@ -1,0 +1,14 @@
+h1 {
+  color: gray;
+}
+img {
+  width: 450px;
+}
+nav {
+  background-color: red;
+  margin-bottom: 10px;
+}
+
+footer{
+  background-color: aquamarine;
+}
