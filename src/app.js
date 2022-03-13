@@ -1,6 +1,7 @@
 const path = require("path")
 const express = require("express")
 const hbs = require("hbs")
+const port = process.env.PORT || 3000
 
 const getGeocode = require("./getGeocode")
 const getWeather = require("./getWeather")
@@ -39,7 +40,7 @@ app.get("/about", (req, res) => {
     name: "Desmond"
   })
 })
-
+// Weather endpoint
 app.get("/weather", (req, res) => {
   if(!req.query.address){
     return res.send({
@@ -69,6 +70,6 @@ app.get("*", (req, res) => {
   res.send("404 page not found")
 })
 
-app.listen(3000, () => {
-  console.log("Server is running on port 3000")
+app.listen(port, () => {
+  console.log(`Server is running on port 3000 ${port}`)
 })
