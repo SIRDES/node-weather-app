@@ -1,5 +1,3 @@
-console.log("client side javaScript loaded");
-
 const formEl = document.querySelector("form");
 const searchInputEl = document.querySelector("input");
 const errorEl = document.querySelector("#error");
