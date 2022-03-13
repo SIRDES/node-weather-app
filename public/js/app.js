@@ -9,12 +9,16 @@ formEl.addEventListener("submit", (e) => {
   const location = searchInputEl.value;
   const url = `/weather?address=${location}`;
 
+  locationEl.textContent = "Loading..."
+  errorEl.textContent=""
   fetch(url).then((response) => {
     response.json().then((data) => {
       if (data.error) {
+        locationEl.textContent= ""
         errorEl.textContent = data.error
         console.log(data.error);
       } else {
+        errorEl.textContent = ""
         locationEl.textContent = `Place Name: ${data.place_name}\nTemperature: ${data.temperature}`
         console.log(data);
       }
@@ -22,7 +26,3 @@ formEl.addEventListener("submit", (e) => {
   });
   searchInputEl.value = "";
 });
-// const handleSubmit = (e) => {
-// e.preventDefault()
-// console.log(searchInputEl.value);
-// }

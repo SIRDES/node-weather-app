@@ -4,14 +4,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/img/favicon.png" />
     <link rel="stylesheet" href="/css/styles.css" />
-    <title>Document</title>
+    <title>Weather app | {{title}} </title>
   </head>
   <body>
-    {{>header}}
-   
-    <img src="/img/IMG-20220309-WA0022.jpg">
-    <p>Created by {{name}} </p>
+    <div id="container">
+      {{>header}}
+   <p id="aboutP">This app provides the weather forcast for a location. It integrates the weatherstack api and the mapbox api </p>
+
+    <div id="imgContainer">
+      <div>
+        <a href="https://www.weatherstack.com" target="_blank"><img width="20px" src="/img/weatherstack.png"></a>
+     </div>
+   <div>
+      <a href="https://www.mapbox.com" target="_blank"><img src="/img/mapbox.png"></a>
+   </div>
+    </div>
+    
     {{>footer}}
+    </div>
   </body>
 </html>

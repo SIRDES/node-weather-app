@@ -30,7 +30,8 @@ app.get("", (req, res) => {
 
 app.get("/help", (req, res) => {
   res.render("Help", {
-    title: "Help page"
+    title: "Help page",
+    name: "Desmond"
   })
 })
 
@@ -71,5 +72,5 @@ app.get("*", (req, res) => {
 })
 
 app.listen(port, () => {
-  console.log(`Server is running on port 3000 ${port}`)
+  console.log(`Server is running on port ${port}`)
 })
